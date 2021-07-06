@@ -185,7 +185,7 @@
 		  </p>
 	  <input type="text" id="inin" name="username" style="width:450px;height:45px;" required><br><br>
 	  <lable>핸드폰 번호*</lable><br>
-	  <input type="text" id="inin" name="phone" style="width:450px;height:45px;" required><br><br>
+	  <input type="text" id="inin" name="phone" style="width:450px;height:45px;" onKeyup="inputPhoneNumber(this);" maxlength="13" required><br><br>
 	  <lable>배송지 주소</lable><br>
 		  <span style="font-size:17px;font-weight:normal;">익산지역 15000원이상 무료배송(금액이하 배송비 3천원 추가)</span><br><br>
 	  <input type="text" id="sample2_postcode" style="height:45px;" name="postnum" placeholder="우편번호">
@@ -326,5 +326,32 @@
         element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
     }
 </script>
+	<script>
+	function inputPhoneNumber(obj) {
+    var number = obj.value.replace(/[^0-9]/g, "");
+    var phone = "";
+
+    if(number.length < 4) {
+        return number;
+    } else if(number.length < 7) {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3);
+    } else if(number.length < 11) {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3, 3);
+        phone += "-";
+        phone += number.substr(6);
+    } else {
+        phone += number.substr(0, 3);
+        phone += "-";
+        phone += number.substr(3, 4);
+        phone += "-";
+        phone += number.substr(7);
+    }
+    obj.value = phone;
+}
+	</script>
 </body>
 </html>

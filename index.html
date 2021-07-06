@@ -1,0 +1,157 @@
+ 
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>익스프레스 서버</title>
+	<style>
+		p{
+			font-size:12px;
+		}
+		h1{
+			font-size:26px;
+			text-align:center;
+		}
+		h3{
+			font-size:15px;
+		}
+		#cok{
+			border: 2px solid;
+			width:450px;
+			margin:auto;
+			padding:30px;
+			border-radius:15px;
+		}
+		#cok img{
+			width:450px;
+			margin:auto;
+		}
+		#cok lable{
+			font-weight:bold;
+			font-size:15px;
+		}
+		textarea{
+			width:350px;
+			height:100px;
+		}
+		#inin{
+			width:250px;
+			height:30px;
+		}
+	</style>
+</head>
+<body>
+
+  <form action="https://millim.run.goorm.io/cookie/order" method="POST">
+	  <div id="cok">
+		  <h1>
+	어글리 쿠키 주문양식
+	</h1>
+	<h3>
+		좋은 날 어글리쿠키를 찾아주셔서 감사합니다.<br>
+
+쿠키는 실온보관 2~3일, 냉동보관 2주까지 가능합니다.
+	</h3>
+	<p>
+		<b style="color:red;">*</b>는 필수항목 입니다.
+	</p><hr style="width:430px">
+		  <lable>상품 소개</lable>
+		  <p>
+			    1. ⛅️화이트MD (화이트초코+마카다미아)<br>
+				2. ⛅️아몬드초콜릿 (다크초코+아몬드)<br>
+				3. ⛅️넛츠오레오 (오레오크림치즈+호두+아몬드)<br>
+				4. ⛅️로투스모어 (로투스크럼블+호두+마시멜로우)<br>
+				5. ⛅️오즈의마법사 (다크초코+프레첼+마시멜로우)<br>
+				6. ❄️말차크림치즈 (화이트초코+마카다미아+크림치즈)<br>
+				7. ❄️크림치즈로투스 (로투스크럼블+호두+크림치즈)<br>
+				8. ⛅️레인보우콘 (푸르트시리얼+호두+마카다미아)<br>
+				9. ❄️티라미수 (호두+마카다미아+크림치즈)<br>
+<br><br><br>
+				크림치즈가 들어간 쿠키는 냉동보관 스티커를 따로 부착해드리고 있습니다.<br>
+				얼린 후 차갑게 드시면 더욱 맛있는 크림치즈 쿠키, 꼭 냉동보관 부탁드려요!<br>
+				모든 넛츠는 전처리 과정을 거쳐 쓴 맛이 나지 않습니다.<br>
+				쿠키에 들어가는 넛츠를 선호하지 않는 고객님들께서는 주문 후, 카카오톡 메시지를 남겨주시면 넛츠를 빼고 따로 반죽이 가능합니다! (넛츠 종류를 변경하는 건 불가능합니다.)
+		  </p>
+		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/aaaa.jpeg" alt="쿠키이미지오류"><br>
+		  
+		  <input name="cookie" type="checkbox" id="1" value="2800" onClick="itemSum(this.form);"><input name="cookiename" value="1. 화이트MD (2800원)" style="border:none;"readonly><input type="number" name="qunt" id="1" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <input name="cookie" type="checkbox" id="2" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="2. 아몬드초콜릿 (3000원)" style="border:none;"readonly><input type="number" name="qunt" id="2" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		 <input name="cookie" type="checkbox" id="3" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="3. 넛츠오레오 (3000원)" style="border:none;"readonly><input type="number" name="qunt" id="3" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <input name="cookie" type="checkbox" id="4" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="4. 로투스모어 (3200원)" style="border:none;"readonly><input type="number" name="qunt" id="4" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <input name="cookie" type="checkbox" id="5" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="5. 오즈의마법사 (3200원)" style="border:none;"readonly><input type="number" name="qunt" id="5" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		 <input name="cookie" type="checkbox" id="6" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="6. 말차크림치즈 (3300원)" style="border:none;"readonly><input type="number" name="qunt" id="6" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <input name="cookie" type="checkbox" id="7" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="7. 크림치즈로투스 (3300원)" style="border:none;"readonly><input type="number" name="qunt" id="7" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <input name="cookie" type="checkbox" id="8" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="8. 레인보우콘 (3300원)" style="border:none;"readonly><input type="number" name="qunt" id="8" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <input name="cookie" type="checkbox" id="9" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="9. 티라미수 (3500원)" style="border:none;"readonly><input type="number" name="qunt" id="9" style="width:40px;" value="0" onClick="itemSum(this.form);">개<br>
+		  
+		  <lable style="width:30px;display:none;">개수</lable><br>
+		  <p style="width:30px;display:none;"><input type="number" id ="qunt"style="width:40px;display:none;" onClick="itemSum(this.form);">개</p>
+	  
+	  <lable>합계</lable><br>
+		  <textarea name="ordered" onkeyup="xSize(this)" readonly></textarea>
+	  <p><input name="total_sum" id="inin" type="text" size="20" style="width: 70px;border-top:none;border-right:none;border-left:none;" readonly>원</p><br><br>
+	  <lable>요청사항</lable><br>
+
+	  <textarea name="plz" onkeyup="xSize(this)" ></textarea><br><br><br>
+	  <lable style="color:green;">정보입력</lable><br><br>
+	  <lable>주문자이름*</lable><br>
+		  <p>
+			  예금자와 동일한 이름을 입력해 주세요. 만약 주문자와 예금자가 다를 경우 '주문자:OOO, 예금자:OOO' 형식으로 각각 입력해 주세요.
+
+		  </p>
+	  <input type="text" id="inin" name="username"  required><br><br>
+	  <lable>핸드폰 번호*</lable><br>
+	  <input type="text" id="inin" name="phone"  required><br><br>
+	  <lable>배송지 주소</lable><br>
+	  <textarea name="address" onkeyup="xSize(this)"></textarea><br><br>
+	  <lable style="color:red;">입금 안내</lable>
+	<p>
+		- 입금계좌 : 카카오뱅크 3333-06-5493120<br>
+- 예금주 : 정소은<br>
+
+주문수량에 맞는 금액을 입금하신 후, 카카오톡채널 메시지에 입금자명과 휴대폰번호 뒤 4자리를 꼭 남겨주세요! (ex, 홍길동0000)<br>
+
+쿠키는 입금 확인 후 맛있게 구워질 예정입니다.<br>
+쿠키가 구워진 후에는 환불이 어려우시니 양해 부탁드려요🙏🏻<br>
+입금 확인 및 문의사항은 카카오톡채널 '어글리쿠키'로 메시지 보내주세요:)<br>
+	</p>
+	  <lable> 개인정보 수집 및 이용 동의*</lable>
+	  <p>
+		  "상품 주문 및 배송을 위해 위에 입력된 개인정보를 수집합니다. 수집한 개인정보는 이외의 목적으로는 사용하지 않으며, 상품 배송 완료 즉시 파기합니다. 개인정보의 수집 및 이용에 대한 동의를 거부할 수 있으며, 이 경우 상품 주문이 어려울 수 있습니다."
+	  </p>
+		  <p><input type="checkbox" style="width:20px;height:20px;" name="informagree" required>개인정보 수집 및 이용에 동의합니다.</p><br>
+	  <lable>파손면책 동의*</lable>
+	   <p>
+		  "쿠키 배송 중 충격에 의해 부서짐이 발생할 수 있습니다. 파손면책에 동의하시겠습니까? 제3자 제공에 대한 동의를 거부할 수 있으며, 이 경우 배송이 제한됩니다."
+	  </p>
+	  <p><input type="checkbox" style="width:20px;height:20px;" name="brokeagree" required>개인정보 수집 및 이용에 동의합니다.</p><br>
+	  <button type="submit">
+		  ok
+	  </button>
+		  </div>
+	</form>
+	<script>
+	function itemSum(frm)
+{
+   var sum = 0;
+   var count = frm.cookie.length;
+	var ary = [];
+   for(var i=0; i < count; i++ ){
+       if( frm.cookie[i].checked == true ){
+	    sum += parseInt(frm.cookie[i].value)*frm.qunt[i].value;
+		ary += frm.cookiename[i].value + ' - ' + frm.qunt[i].value + "개"+ "\r\n";
+       }
+   }
+   frm.total_sum.value = sum;
+	frm.ordered.value = ary;
+}
+	</script>
+</body>
+</html>

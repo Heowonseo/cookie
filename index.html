@@ -111,6 +111,14 @@
   background-color: #ffffff;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
+		}
+#logo{
+	object-fit: contain;
+	width:120px;
+	height:110px;
+    	float:right;
+	bottom: 0px;
+		}
 	</style>
 	<meta name="viewport" content=" user-scalable=no">
 </head>
@@ -215,6 +223,7 @@
 	  <button type="submit"  class="btn">
 		  주문하기
 	  </button>
+		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/%EC%96%B4%EA%B8%80%EB%A6%AC.png" alt="로고이미지오류" id="logo"><br>
 		  </div>
 	</form>
 		
@@ -314,8 +323,8 @@
     // resize이벤트나, orientationchange이벤트를 이용하여 값이 변경될때마다 아래 함수를 실행 시켜 주시거나,
     // 직접 element_layer의 top,left값을 수정해 주시면 됩니다.
     function initLayerPosition(){
-        var width = 800; //우편번호서비스가 들어갈 element의 width
-        var height = 900; //우편번호서비스가 들어갈 element의 height
+        var width = 500; //우편번호서비스가 들어갈 element의 width
+        var height = 700; //우편번호서비스가 들어갈 element의 height
         var borderWidth = 5; //샘플에서 사용하는 border의 두께
 
         // 위에서 선언한 값들을 실제 element에 넣는다.

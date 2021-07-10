@@ -1,21 +1,21 @@
  
- 
 <html>
 <head>
   <meta charset="UTF-8" />
   <title>UglyCookie</title>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<style>
 		@font-face {
-    font-family: 'Cafe24Oneprettynight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 		*{
-			font-family: 'Cafe24Oneprettynight';
+			font-family: 'IM_Hyemin-Regular';
 		}
 		p{
-			font-size:25px;
+			font-size:17px;
 		}
 		h1{
 			font-size:60px;
@@ -23,7 +23,7 @@
 			text-align:center;
 		}
 		h3{
-			font-size:35px;
+			font-size:32px;
 		}
 		html{
 			background-color:#fffac4;
@@ -63,7 +63,7 @@
 			height:30px;
 		}
 		input[type=checkbox]{
-			width:25px;
+			width:30px;
 			height: 25px;
 		}
 		.btn {
@@ -96,7 +96,7 @@
 	text-indent:0;
 	display:inline-block;
 	color:#394352;
-	font-size:23px;;
+	font-size:20px;;
 	font-weight:bold;
 	font-style:normal;
 	height:45px;
@@ -112,14 +112,63 @@
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 		}
+		.closebtn {
+	background-color:black;
+	border-radius:15px;
+	border: 0;
+	text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-size:20px;;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	margin-bottom:20px;
+}
 #logo{
+	box-shadow:1px 1px 5px 5px #9fa6a1;
 	object-fit: contain;
-	width:140px;
-	height:126px;
-	
+	width:110px;
+	height:110px;
+	border: 0;
+	border-radius:45px;
     float:right;
 	bottom: 0px;
 		}
+		.item{
+			border:none;
+			font-size:25px;
+			width:400px;
+			margin-right: 45px;
+		}
+input[type=number]{
+			width:50px;
+	height: 35px;
+	line-height:35px;
+	margin-bottom: 11px;
+	text-align:center;
+		}
+		span{
+			font-size:19px;
+		}
+		.swal-text {
+    		font-size:30px;
+			font-weight:bold;
+			margin-top: 100px;
+}
+		.swal-modal {
+			width:700px;
+			height:200px;
+		}
+		.swal-button {
+			width:150px;
+			height:70px;
+    		font-size: 21px;
+}
 	</style>
 	<meta name="viewport" content=" user-scalable=no">
 </head>
@@ -155,37 +204,37 @@
 		  </p><br>
 		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/52E99945-D9EE-46D4-895F-AC20C9A62143.jpeg" alt="쿠키이미지오류" style="width:790px;margin:auto;margin-bottom:50px;"><br>
 		  
-		  <input name="cookie" type="checkbox" id="1" value="2800" onClick="itemSum(this.form);"><input name="cookiename" value="1. 화이트MD (2800원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="1" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;font-align:center;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="1" value="2800" onClick="itemSum(this.form);"><input name="cookiename" value="1. 화이트MD (2800원)" class="item" readonly><input type="number" name="qunt" id="1" value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		  <input name="cookie" type="checkbox" id="2" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="2. 아몬드초콜릿 (3000원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="2" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="2" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="2. 아몬드초콜릿 (3000원)"  class="item"readonly><input type="number" name="qunt" id="2"  value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		 <input name="cookie" type="checkbox" id="3" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="3. 넛츠오레오 (3000원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="3" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		 <input name="cookie" type="checkbox" id="3" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="3. 넛츠오레오 (3000원)"  class="item"readonly><input type="number" name="qunt" id="3" value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		  <input name="cookie" type="checkbox" id="4" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="4. 로투스모어 (3200원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="4" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="4" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="4. 로투스모어 (3200원)"  class="item"readonly><input type="number" name="qunt" id="4" value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		  <input name="cookie" type="checkbox" id="5" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="5. 오즈의마법사 (3200원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="5" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="5" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="5. 오즈의마법사 (3200원)"  class="item"readonly><input type="number" name="qunt" id="5"  value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		 <input name="cookie" type="checkbox" id="6" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="6. 말차크림치즈 (3300원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="6" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		 <input name="cookie" type="checkbox" id="6" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="6. 말차크림치즈 (3300원)"  class="item"readonly><input type="number" name="qunt" id="6" value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		  <input name="cookie" type="checkbox" id="7" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="7. 크림치즈로투스 (3300원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="7" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="7" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="7. 크림치즈로투스 (3300원)" class="item"readonly><input type="number" name="qunt" id="7"  value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		  <input name="cookie" type="checkbox" id="8" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="8. 레인보우콘 (3300원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="8" style="width:50px;height:35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="8" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="8. 레인보우콘 (3300원)"  class="item"readonly><input type="number" name="qunt" id="8" value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
-		  <input name="cookie" type="checkbox" id="9" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="9. 티라미수 (3500원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="9" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
-		  <input name="cookie" type="checkbox" id="10" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="10. 흑임자크림치즈 (3500원)" style="border:none;font-size:30px;width:350px;margin-right: 45px;"readonly><input type="number" name="qunt" id="10" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="9" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="9. 티라미수 (3500원)" class="item" readonly><input type="number" name="qunt" id="9" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="10" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="10. 흑임자크림치즈 (3500원)"  class="item"readonly><input type="number" name="qunt" id="10" value="1" onchange="itemSum(this.form);" min="0">개<br>
 		  
 		  <lable style="width:30px;display:none;">개수</lable><br>
 		  <p style="width:30px;display:none;"><input type="number" id ="qunt"style="width:50px;display:none;" onClick="itemSum(this.form);">개</p>
 	  
-	  <lable>합계</lable> <span style="font-size:19px;font-weight:normal;">(주문 수량을 한번 더 확인해주세요.)</span><br>
+	  <lable>합계</lable> <span >(주문 수량을 한번 더 확인해주세요.)</span><br>
 		  <textarea name="ordered" onkeyup="xSize(this)" readonly ></textarea>
 	  <p><input name="total_sum" id="inin" type="text" size="20" style="width: 150px;border-top:none;border-right:none;border-left:none;" readonly >원</p><br>
-	  <lable>요청사항</lable><span style="font-size:19px;font-weight:normal;"> ex) 냉동상태로 보내주세요, 얼려서 포장이요!</span><br>
+	  <lable>요청사항</lable><span> ex) 냉동상태로 보내주세요, 얼려서 포장이요!</span><br>
 
-	  <textarea name="plz" onkeyup="xSize(this)" ></textarea><br><br><br><br>
+	  <textarea name="plz" onkeyup="xSize(this)" ></textarea><br><br><br><br><hr><br>
 	  <lable style="color:green;font-size:30px;">정보입력</lable><br><br>
 	  <lable>주문자이름</lable><br>
-		  <p style="margin-top: 0px;margin-bottom: 0px;font-size:22px;">
+		  <p style="margin-top: 0px;margin-bottom: 0px;font-size:17px;">
 			  입금자명을 입력해주세요. 만약 주문자와 입금자가 다를 경우 <br>'주문자:OOO, 입금자:OOO' 형식으로 각각 입력해 주세요.
 
 		  </p>
@@ -198,7 +247,7 @@
 	<input type="button" onclick="sample2_execDaumPostcode()" style="margin-bottom:10px;margin-left: 10px" class="findbtn" value="우편번호 찾기"><br>
 	<input type="text" id="sample2_address" name="address" style="height:45px;width:450px;margin-bottom:10px;" placeholder="주소" required><br>
 	<input type="text" id="sample2_detailAddress" style="height:45px;width:255px;" name="detail" placeholder="상세주소">
-	<input type="text" id="sample2_extraAddress" name="etc" style="height:45px;margin-left: 10px" placeholder="참고항목" readonly><br><br><br>
+	<input type="text" id="sample2_extraAddress" name="etc" style="height:45px;margin-left: 10px;width:170px;" placeholder="참고항목" readonly><br><br><br>
 	  <lable style="color:red;font-size:30px;">입금 안내</lable>
 	<p style="margin-top:10px;">
 		- 입금계좌 : 카카오뱅크 3333-06-5493120<br>
@@ -220,7 +269,7 @@
 	  <button type="submit"  class="btn">
 		  주문하기
 	  </button>
-		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/%EC%96%B4%EA%B8%80%EB%A6%AC.png" alt="로고이미지오류" id="logo"><br>
+		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/%EC%96%B4%EA%B8%80%EB%A6%AC.png" alt="로고이미지오류" id="logo" onclick="thank()"><br>
 		  </div>
 	</form>
 		
@@ -321,7 +370,7 @@
     // resize이벤트나, orientationchange이벤트를 이용하여 값이 변경될때마다 아래 함수를 실행 시켜 주시거나,
     // 직접 element_layer의 top,left값을 수정해 주시면 됩니다.
     function initLayerPosition(){
-        var width = 600; //우편번호서비스가 들어갈 element의 width
+        var width = 500; //우편번호서비스가 들어갈 element의 width
         var height = 700; //우편번호서비스가 들어갈 element의 height
         var borderWidth = 5; //샘플에서 사용하는 border의 두께
 
@@ -360,6 +409,30 @@
     }
     obj.value = phone;
 }
+	</script>
+	<script>
+	function thank(){
+		swal("무료로 우리 가게만의 주문서를 만들고 싶나요?", {
+  buttons: {
+    cancel: "괜찮아요",
+    catch: {
+      text: "지금 만들기",
+      value: "catch",
+    }
+  },
+})
+.then((value) => {
+  switch (value) {
+ 
+    case "catch":
+      document.location.href="/order";
+ 
+    default:
+     return;
+  }
+});
+		return;
+	}
 	</script>
 </body>
 </html>

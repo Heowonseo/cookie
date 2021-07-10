@@ -19,10 +19,9 @@
 }
 		*{
 			 font-family: 'IBMPlexSansKR-Regular';
-			font-size:20px;
 		}
 		p{
-			font-size:17px;
+			font-size:18px;
 			line-height: 30px;
 		}
 		h1{
@@ -31,7 +30,7 @@
 			text-align:center;
 		}
 		h3{
-			font-size:30px;
+			font-size:28px;
 			line-height: 40px;
 		}
 		html{
@@ -56,7 +55,7 @@
 		}
 		#cok lable{
 			font-weight:bold;
-			font-size:27px;
+			font-size:20px;
 		}
 		textarea{
 			width:600px;
@@ -65,7 +64,7 @@
 			resize:none;
 		}
 		input{
-			font-size:27px;
+			font-size:28px;
 		}
 		#inin{
 			width:250px;
@@ -82,7 +81,7 @@
 	text-indent:0;
 	display:inline-block;
 	color:#394352;
-	font-size:22px;;
+	font-size:23px;
 	font-weight:bold;
 	font-style:normal;
 	height:70px;
@@ -128,7 +127,7 @@
 	text-indent:0;
 	display:inline-block;
 	color:#ffffff;
-	font-size:20px;;
+	font-size:20px;
 	font-weight:bold;
 	font-style:normal;
 	height:40px;
@@ -141,7 +140,7 @@
 #logo{
 	box-shadow:1px 1px 5px 5px #9fa6a1;
 	object-fit: contain;
-	width:110px;
+	width:120px;
 	height:110px;
 	border: 0;
 	border-radius:45px;
@@ -150,7 +149,7 @@
 		}
 		.item{
 			border:none;
-			font-size:25px;
+			font-size:27px;
 			width:400px;
 			margin-right: 45px;
 		}
@@ -164,7 +163,7 @@ input[type=number]{
 	font-size:20px;
 		}
 		span{
-			font-size:19px;
+			font-size:15px;
 		}
 		.swal-text {
     		font-size:30px;
@@ -180,7 +179,9 @@ input[type=number]{
 			height:70px;
     		font-size: 19px;
 }
-
+		#qu{
+			font-size:20px;
+		}
 	</style>
 	<meta name="viewport" content=" user-scalable=no">
 </head>
@@ -216,35 +217,35 @@ input[type=number]{
 		  </p><br>
 		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/52E99945-D9EE-46D4-895F-AC20C9A62143.jpeg" alt="쿠키이미지오류" style="width:790px;margin:auto;margin-bottom:50px;"><br>
 		  
-		  <input name="cookie" type="checkbox" id="1" value="2800" onClick="itemSum(this.form);"><input name="cookiename" value="1. 화이트MD (2800원)" class="item" readonly><input type="number" name="qunt" id="1" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="1" value="2800" onClick="itemSum(this.form);"><input name="cookiename" value="1. 화이트MD (2800원)" class="item" readonly><input type="number" name="qunt" id="1" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		  <input name="cookie" type="checkbox" id="2" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="2. 아몬드초콜릿 (3000원)"  class="item"readonly><input type="number" name="qunt" id="2"  value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="2" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="2. 아몬드초콜릿 (3000원)"  class="item" readonly><input type="number" name="qunt" id="2"  value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		 <input name="cookie" type="checkbox" id="3" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="3. 넛츠오레오 (3000원)"  class="item"readonly><input type="number" name="qunt" id="3" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		 <input name="cookie" type="checkbox" id="3" value="3000" onClick="itemSum(this.form);"><input name="cookiename" value="3. 넛츠오레오 (3000원)"  class="item"readonly><input type="number" name="qunt" id="3" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		  <input name="cookie" type="checkbox" id="4" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="4. 로투스모어 (3200원)"  class="item"readonly><input type="number" name="qunt" id="4" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="4" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="4. 로투스모어 (3200원)"  class="item"readonly><input type="number" name="qunt" id="4" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		  <input name="cookie" type="checkbox" id="5" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="5. 오즈의마법사 (3200원)"  class="item"readonly><input type="number" name="qunt" id="5"  value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="5" value="3200" onClick="itemSum(this.form);"><input name="cookiename" value="5. 오즈의마법사 (3200원)"  class="item"readonly><input type="number" name="qunt" id="5"  value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		 <input name="cookie" type="checkbox" id="6" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="6. 말차크림치즈 (3300원)"  class="item"readonly><input type="number" name="qunt" id="6" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		 <input name="cookie" type="checkbox" id="6" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="6. 말차크림치즈 (3300원)"  class="item"readonly><input type="number" name="qunt" id="6" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		  <input name="cookie" type="checkbox" id="7" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="7. 크림치즈로투스 (3300원)" class="item"readonly><input type="number" name="qunt" id="7"  value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="7" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="7. 크림치즈로투스 (3300원)" class="item"readonly><input type="number" name="qunt" id="7"  value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		  <input name="cookie" type="checkbox" id="8" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="8. 레인보우콘 (3300원)"  class="item"readonly><input type="number" name="qunt" id="8" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="8" value="3300" onClick="itemSum(this.form);"><input name="cookiename" value="8. 레인보우콘 (3300원)"  class="item"readonly><input type="number" name="qunt" id="8" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
-		  <input name="cookie" type="checkbox" id="9" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="9. 티라미수 (3500원)" class="item" readonly><input type="number" name="qunt" id="9" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0">개<br>
-		  <input name="cookie" type="checkbox" id="10" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="10. 흑임자크림치즈 (3500원)"  class="item"readonly><input type="number" name="qunt" id="10" value="1" onchange="itemSum(this.form);" min="0">개<br>
+		  <input name="cookie" type="checkbox" id="9" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="9. 티라미수 (3500원)" class="item" readonly><input type="number" name="qunt" id="9" style="width:50px;height: 35px;line-height:35px;margin-bottom: 11px;" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
+		  <input name="cookie" type="checkbox" id="10" value="3500" onClick="itemSum(this.form);"><input name="cookiename" value="10. 흑임자크림치즈 (3500원)"  class="item"readonly><input type="number" name="qunt" id="10" value="1" onchange="itemSum(this.form);" min="0"><span id="qu">개</span><br>
 		  
 		  <lable style="width:30px;display:none;">개수</lable><br>
 		  <p style="width:30px;display:none;"><input type="number" id ="qunt"style="width:50px;display:none;" onClick="itemSum(this.form);">개</p>
 	  
-	  <lable>합계</lable> <span >(주문 수량을 한번 더 확인해주세요.)</span><br>
+	  <lable>합계 </lable> <span > (주문 수량을 한번 더 확인해주세요.)</span><br>
 		  <textarea name="ordered" onkeyup="xSize(this)" readonly ></textarea>
 	  <p><input name="total_sum" id="inin" type="text" size="20" style="width: 150px;border-top:none;border-right:none;border-left:none;height:50px;" readonly >원</p><br>
-	  <lable>요청사항</lable><span> ex) 냉동상태로 보내주세요, 얼려서 포장이요!</span><br>
+	  <lable>요청사항 </lable><span>  ex) 냉동상태로 보내주세요, 얼려서 포장이요!</span><br>
 
 	  <textarea name="plz" onkeyup="xSize(this)" ></textarea><br><br><br><br><hr><br>
-	  <lable style="color:green;font-size:30px;">정보입력</lable><br><br>
+	  <lable style="color:green;font-size:20px;">정보입력</lable><br><br>
 	  <lable>주문자이름</lable><br>
 		  <p style="margin-top: 0px;margin-bottom: 0px;font-size:17px;">
 			  입금자명을 입력해주세요. 만약 주문자와 입금자가 다를 경우 <br>'주문자:OOO, 입금자:OOO' 형식으로 각각 입력해 주세요.
@@ -254,14 +255,14 @@ input[type=number]{
 	  <lable>핸드폰 번호</lable><br>
 	  <input type="text" id="inin" name="phone" style="width:450px;height:45px;" onKeyup="inputPhoneNumber(this);" maxlength="13" required><br><br>
 	  <lable>배송지 주소</lable><br>
-		  <p style="margin-top: 0px;">익산지역 15000원이상 무료배송(금액이하 배송비 3천원 추가)</p>
+		  <p>익산지역 15000원이상 무료배송(금액이하 배송비 3천원 추가)</p><br>
 	  <input type="text" id="sample2_postcode" style="height:45px;width:300px;" name="postnum" placeholder="우편번호" required>
 	<input type="button" onclick="sample2_execDaumPostcode()" style="margin-bottom:10px;margin-left: 10px" class="findbtn" value="우편번호 찾기"><br>
 	<input type="text" id="sample2_address" name="address" style="height:45px;width:450px;margin-bottom:10px;" placeholder="주소" required><br>
 	<input type="text" id="sample2_detailAddress" style="height:45px;width:255px;" name="detail" placeholder="상세주소">
 	<input type="text" id="sample2_extraAddress" name="etc" style="height:45px;margin-left: 10px;width:170px;" placeholder="참고항목" readonly><br><br><br>
 		
-	  <lable style="color:red;font-size:30px;">입금 안내</lable>
+	  <lable style="color:red;font-size:20px;">입금안내</lable>
 	<p style="margin-top:10px;">
 		- 입금계좌 : 카카오뱅크 3333-06-5493120<br>
 - 예금주 : 정소은<br><br>
@@ -285,7 +286,7 @@ input[type=number]{
 		  <img src="https://millim.s3.ap-northeast-2.amazonaws.com/original/%EC%96%B4%EA%B8%80%EB%A6%AC.png" alt="로고이미지오류" id="logo" onclick="thank()"><br>
 		  </div>
 	</form>
-		 <a href="https://orderspaceman.netlify.app/" style="font-size:20px;color:black;text-decoration-line: none;">[무료로 우리 가게 주문서 만들기]</a>
+		 <a href="https://orderspaceman.netlify.app/" style="font-size:19px;color:black;text-decoration-line: none;margin-left:20px;">[무료로 우리 가게 주문서 만들기]</a>
 	</div>
 				
 	<script>
